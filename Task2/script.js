@@ -63,3 +63,15 @@ console.log("Reversed basket:", reverseBasket);
 for (let i = 0; i < 2; i++) {
     console.log(arrayOfFruits.join(", "));
 }
+
+// -------------------------------------------------------------
+let repeatedBasket = "";
+for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < arrayOfFruits.length; j++) {
+        repeatedBasket += arrayOfFruits[j];
+        if (!(i === 1 && j === arrayOfFruits.length - 1)) {
+            repeatedBasket += ", "; // აქ ამას თუ ჩაამატებ , სტრინგში შეინახავს 
+        }
+    }
+}
+console.log("Basket repeated 2x:", repeatedBasket);
