@@ -68,22 +68,141 @@
 
 
 
-const numbers = [3, 7, 12, 5, 8];
+// const numbers = [3, 7, 12, 5, 8];
 
-const squaredNumbers = numbers.map(num => num * num);
-console.log(squaredNumbers);
+// const squaredNumbers = numbers.map(num => num * num);
+// console.log(squaredNumbers);
 
-const evenNumbers = numbers.filter(num => num % 2 === 0);
-console.log(evenNumbers);
+// const evenNumbers = numbers.filter(num => num % 2 === 0);
+// console.log(evenNumbers);
 
-const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-console.log(sum);
+// const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+// console.log(sum);
 
-function checkNumbers(num) {
-    if (num > 10 && num % 2 === 0) {
-        return true
-    } else {
-        return false
-    }
+// function checkNumbers(num) {
+//     if (num > 10 && num % 2 === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(checkNumbers(12));
+
+
+
+const book = {
+    name: "The Goat's Feast",
+    author: "Mario Vargas Llosa",
+    language: "Spanish",
+    country: "Peru",
+    year: 1980
 }
-console.log(checkNumbers(12));
+
+const book2 = {
+    name: "1984",
+    author: "George Orwell",
+    language: "English",
+    country: "UK",
+    year: 1950
+}
+
+// console.log("name:", book.name);
+// console.log("author:", book.author);
+// console.log("language:", book.language);
+// console.log("country:", book.country);
+// console.log("year:", book.year);
+
+// console.log(book2["name"]);
+// console.log(book2["author"]);
+// console.log(book2["language"]);
+// console.log(book2["country"]);
+// console.log(book2["year"]);
+
+// const keys = Object.keys(book);
+// console.log(keys);
+
+// for (let i = 0; i < keys.length; i++) {
+//     const key = keys[i];
+//     console.log(key + ": " + book[key]);
+// }
+
+// for (const key in book2) {
+//     console.log(key + ": " + book2[key]);
+// }
+
+
+
+const company = {
+    name: "TechStars Inc.",
+    location: "New York",
+    departments: {
+        engineering: {
+            manager: "Alice Johnson",
+            teams: {
+                frontend: {
+                    lead: "John Doe",
+                    members: ["Emma", "Liam", "Olivia"]
+                },
+                backend: {
+                    lead: "Michael Smith",
+                    members: ["Noah", "Ava", "Sophia"]
+                }
+            }
+        },
+        marketing: {
+            manager: "Sarah Brown",
+            teams: {
+                seo: {
+                    lead: "David Lee",
+                    members: ["Mia", "Ethan", "Isabella"]
+                },
+                content: {
+                    lead: "Sophia Davis",
+                    members: ["Lucas", "Charlotte", "Amelia"]
+                }
+            }
+        },
+        sales: {
+            manager: "Robert Wilson",
+            teams: {
+                domestic: {
+                    lead: "James Miller",
+                    members: ["Benjamin", "Harper", "Evelyn"]
+                },
+                international: {
+                    lead: "Elizabeth Taylor",
+                    members: ["Alexander", "Ella", "Henry"]
+                }
+            }
+        }
+    }
+};
+
+for (let dep in company.departments) {
+    console.log(dep);
+}
+
+// for (let dep in company.departments) {
+//     let teams = company.departments[dep].teams;
+//     for (let team in teams) {
+//         console.log(teams[team].lead)
+//     }
+// }
+
+// let backMem = company.departments.engineering.teams.backend.members;
+// for (i = 0; i < backMem.length; i++) {
+//     console.log("backend members:", backMem[i]);
+// }
+// for (let i of backMem) {
+//     console.log(i);
+// }
+
+// for (let dep in company.departments) {
+//     let teams = company.departments[dep].teams;
+//     for (let team in teams) {
+//         let members = teams[team].members
+//         for (i = 0; i < members.length; i++) {
+//             console.log("members:", members[i]);
+//         }
+//     }
+// }
