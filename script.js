@@ -90,21 +90,21 @@
 
 
 
-const book = {
-    name: "The Goat's Feast",
-    author: "Mario Vargas Llosa",
-    language: "Spanish",
-    country: "Peru",
-    year: 1980
-}
+// const book = {
+//     name: "The Goat's Feast",
+//     author: "Mario Vargas Llosa",
+//     language: "Spanish",
+//     country: "Peru",
+//     year: 1980
+// }
 
-const book2 = {
-    name: "1984",
-    author: "George Orwell",
-    language: "English",
-    country: "UK",
-    year: 1950
-}
+// const book2 = {
+//     name: "1984",
+//     author: "George Orwell",
+//     language: "English",
+//     country: "UK",
+//     year: 1950
+// }
 
 // console.log("name:", book.name);
 // console.log("author:", book.author);
@@ -132,55 +132,55 @@ const book2 = {
 
 
 
-const company = {
-    name: "TechStars Inc.",
-    location: "New York",
-    departments: {
-        engineering: {
-            manager: "Alice Johnson",
-            teams: {
-                frontend: {
-                    lead: "John Doe",
-                    members: ["Emma", "Liam", "Olivia"]
-                },
-                backend: {
-                    lead: "Michael Smith",
-                    members: ["Noah", "Ava", "Sophia"]
-                }
-            }
-        },
-        marketing: {
-            manager: "Sarah Brown",
-            teams: {
-                seo: {
-                    lead: "David Lee",
-                    members: ["Mia", "Ethan", "Isabella"]
-                },
-                content: {
-                    lead: "Sophia Davis",
-                    members: ["Lucas", "Charlotte", "Amelia"]
-                }
-            }
-        },
-        sales: {
-            manager: "Robert Wilson",
-            teams: {
-                domestic: {
-                    lead: "James Miller",
-                    members: ["Benjamin", "Harper", "Evelyn"]
-                },
-                international: {
-                    lead: "Elizabeth Taylor",
-                    members: ["Alexander", "Ella", "Henry"]
-                }
-            }
-        }
-    }
-};
+// const company = {
+//     name: "TechStars Inc.",
+//     location: "New York",
+//     departments: {
+//         engineering: {
+//             manager: "Alice Johnson",
+//             teams: {
+//                 frontend: {
+//                     lead: "John Doe",
+//                     members: ["Emma", "Liam", "Olivia"]
+//                 },
+//                 backend: {
+//                     lead: "Michael Smith",
+//                     members: ["Noah", "Ava", "Sophia"]
+//                 }
+//             }
+//         },
+//         marketing: {
+//             manager: "Sarah Brown",
+//             teams: {
+//                 seo: {
+//                     lead: "David Lee",
+//                     members: ["Mia", "Ethan", "Isabella"]
+//                 },
+//                 content: {
+//                     lead: "Sophia Davis",
+//                     members: ["Lucas", "Charlotte", "Amelia"]
+//                 }
+//             }
+//         },
+//         sales: {
+//             manager: "Robert Wilson",
+//             teams: {
+//                 domestic: {
+//                     lead: "James Miller",
+//                     members: ["Benjamin", "Harper", "Evelyn"]
+//                 },
+//                 international: {
+//                     lead: "Elizabeth Taylor",
+//                     members: ["Alexander", "Ella", "Henry"]
+//                 }
+//             }
+//         }
+//     }
+// };
 
-for (let dep in company.departments) {
-    console.log(dep);
-}
+// for (let dep in company.departments) {
+//     console.log(dep);
+// }
 
 // for (let dep in company.departments) {
 //     let teams = company.departments[dep].teams;
@@ -206,3 +206,29 @@ for (let dep in company.departments) {
 //         }
 //     }
 // }
+
+
+
+
+
+// setTimeout(() => {
+//     console.log("time's up");
+// }, 5000);
+
+// setTimeout(() => {
+//     const body = document.querySelector("body");
+//     body.style.backgroundColor = "black";
+// }, 5000);
+
+
+
+let counter = 0;
+let intervalId = setInterval(() => {
+    counter++;
+    console.log(counter, "hello");
+
+    if (counter == 5) {
+        clearInterval(intervalId);
+        console.log("goodbye");
+    }
+}, 1000)
