@@ -222,13 +222,62 @@
 
 
 
-let counter = 0;
-let intervalId = setInterval(() => {
-    counter++;
-    console.log(counter, "hello");
+// let counter = 0;
+// let intervalId = setInterval(() => {
+//     counter++;
+//     console.log(counter, "hello");
 
-    if (counter == 5) {
-        clearInterval(intervalId);
-        console.log("goodbye");
-    }
-}, 1000)
+//     if (counter == 5) {
+//         clearInterval(intervalId);
+//         console.log("goodbye");
+//     }
+// }, 1000)
+
+
+
+
+// function getNumbers() {
+//     return new Promise(resolve => {
+//         setTimeout(() => { resolve(42) }, 2000)
+//     })
+// }
+// // console.log(getNumbers());
+
+// async function showNumbers() {
+//     const numbersArray = await getNumbers();
+//     console.log(numbersArray);
+// }
+// // console.log(showNumbers());
+
+// console.log(getNumbers());
+
+
+
+
+async function doubleWait() {
+    const firstTalk = await new Promise(resolve => setTimeout(resolve("First talk"), 2000))
+    console.log(firstTalk)
+
+    const secondTalk = await new Promise(resolve => setTimeout(resolve("Second talk"), 4000))
+    console.log(secondTalk)
+}
+doubleWait()
+
+
+
+
+function first(ms, val) {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve(val), ms);
+    });
+}
+
+async function smth() {
+    const result1 = await first(1000, "first");
+    console.log(result1);
+
+    const result2 = await first(2000, "second");
+    console.log(result2);
+}
+
+smth();
