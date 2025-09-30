@@ -253,31 +253,85 @@
 
 
 
+// async function doubleWait() {
+//     const firstTalk = await new Promise(resolve => setTimeout(resolve("First talk"), 2000))
+//     console.log(firstTalk)
 
-async function doubleWait() {
-    const firstTalk = await new Promise(resolve => setTimeout(resolve("First talk"), 2000))
-    console.log(firstTalk)
+//     const secondTalk = await new Promise(resolve => setTimeout(resolve("Second talk"), 4000))
+//     console.log(secondTalk)
+// }
+// doubleWait()
 
-    const secondTalk = await new Promise(resolve => setTimeout(resolve("Second talk"), 4000))
-    console.log(secondTalk)
+
+
+// function first(ms, val) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => resolve(val), ms);
+//     });
+// }
+
+// async function smth() {
+//     const result1 = await first(1000, "first");
+//     console.log(result1);
+
+//     const result2 = await first(2000, "second");
+//     console.log(result2);
+// }
+
+// smth();
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//     .then((res) => {
+//         if (!res.ok) {
+//             throw new Error("response was not ok");
+//         }
+//         return res.json();
+//     })
+//     .then((data) => {
+//         console.log(data);
+//         data.forEach(user => console.log(user.name))
+//     })
+//     .catch((err) => console.log(err))
+
+
+// async function fetchData() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//         const data = await response.json();
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// fetchData();
+
+
+// import axios from "axios"
+
+
+async function getPost() {
+    try {
+        const res = await axios.get("https://jsonplaceholder.typicode.com/users");
+        console.log("this is data", res.data)
+    } catch (error) {
+        console.log(error);
+    }
 }
-doubleWait()
+getPost();
 
 
+const API_URL = "https://jsonplaceholder.typicode.com/";
 
-
-function first(ms, val) {
-    return new Promise((resolve) => {
-        setTimeout(() => resolve(val), ms);
-    });
+async function createPost() {
+    try {
+        const res = await axios.put(API_URL + "/posts/1", { title: "My Post", body: "This is my last post ", userId: 1 });
+        console.log("This is my data :", res.data)
+    } catch (error) {
+        console.log("This is my error :", error)
+    }
 }
-
-async function smth() {
-    const result1 = await first(1000, "first");
-    console.log(result1);
-
-    const result2 = await first(2000, "second");
-    console.log(result2);
-}
-
-smth();
+createPost();
