@@ -313,25 +313,51 @@
 // import axios from "axios"
 
 
-async function getPost() {
-    try {
-        const res = await axios.get("https://jsonplaceholder.typicode.com/users");
-        console.log("this is data", res.data)
-    } catch (error) {
-        console.log(error);
-    }
-}
-getPost();
+// async function getPost() {
+//     try {
+//         const res = await axios.get("https://jsonplaceholder.typicode.com/users");
+//         console.log("this is data", res.data)
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// getPost();
 
 
-const API_URL = "https://jsonplaceholder.typicode.com/";
+// const API_URL = "https://jsonplaceholder.typicode.com/";
 
-async function createPost() {
-    try {
-        const res = await axios.put(API_URL + "/posts/1", { title: "My Post", body: "This is my last post ", userId: 1 });
-        console.log("This is my data :", res.data)
-    } catch (error) {
-        console.log("This is my error :", error)
-    }
-}
-createPost();
+// async function createPost() {
+//     try {
+//         const res = await axios.put(API_URL + "/posts/1", { title: "My Post", body: "This is my last post ", userId: 1 });
+//         console.log("This is my data :", res.data)
+//     } catch (error) {
+//         console.log("This is my error :", error)
+//     }
+// }
+// createPost();
+
+
+const pattern = /^A/
+const pattern2 = /\d/
+const pattern3 = /Z$/
+
+
+
+const phone = /^\d{2}-\d{2}-\d{3}-\d{2}-\d{2}$/
+const num = "41-79-123-45-67"
+
+// console.log(phone.test(num));
+
+const nameCheck = /^[A-Za-z]+$/
+const username = 'saxeli'
+console.log(nameCheck.test(username));
+
+const emailCheck = /^[A-Za-z0-9]+@gmail\.com$/
+const email = "user@gmail.com"
+console.log(emailCheck.test(email));
+
+const passCheck = /^[A-Za-z0-9]+/
+const pass = "Pass1234!"
+
+
+const pass2 = "12345"
