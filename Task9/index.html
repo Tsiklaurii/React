@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <button id="load_products">Load Products</button>
+        <h4>Products</h4>
+        <div class="list" id="list"></div>
+    </section>
+
+    <section>
+        <h4>Coupon Validation</h4>
+        <input type="text" name="coupon" id="coupon_input" class="coupon_input">
+        <p id="validation_result" class="result"></p>
+        <button id="coupon_validation">Apply</button>
+    </section>
+
+    <section>
+        <button id="checkout_btn">Checkout</button>
+        <p id="checkout_result" class="checkout_result"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

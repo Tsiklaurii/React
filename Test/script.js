@@ -337,27 +337,52 @@
 // createPost();
 
 
-const pattern = /^A/
-const pattern2 = /\d/
-const pattern3 = /Z$/
+// const pattern = /^A/
+// const pattern2 = /\d/
+// const pattern3 = /Z$/
 
 
 
-const phone = /^\d{2}-\d{2}-\d{3}-\d{2}-\d{2}$/
-const num = "41-79-123-45-67"
+// const phone = /^\d{2}-\d{2}-\d{3}-\d{2}-\d{2}$/
+// const num = "41-79-123-45-67"
 
-// console.log(phone.test(num));
+// // console.log(phone.test(num));
 
-const nameCheck = /^[A-Za-z]+$/
-const username = 'saxeli'
-console.log(nameCheck.test(username));
+// const nameCheck = /^[A-Za-z]+$/
+// const username = 'saxeli'
+// console.log(nameCheck.test(username));
 
-const emailCheck = /^[A-Za-z0-9]+@gmail\.com$/
-const email = "user@gmail.com"
-console.log(emailCheck.test(email));
+// const emailCheck = /^[A-Za-z0-9]+@gmail\.com$/
+// const email = "user@gmail.com"
+// console.log(emailCheck.test(email));
 
-const passCheck = /^[A-Za-z0-9]+/
-const pass = "Pass1234!"
+// const passCheck = /^[A-Za-z0-9]+/
+// const pass = "Pass1234!"
+
+// const pass2 = "12345"
 
 
-const pass2 = "12345"
+
+
+
+const API_URL = "https://jsonplaceholder.typicode.com/users";
+
+async function getUsers() {
+    try {
+        const res = await axios.get(API_URL);
+        users = res.data;
+
+        const longNamedUsers = users.filter(user => user.name.length > 6);
+        console.log(longNamedUsers);
+
+        const websites = users.filter(user => user.website.endsWith(".org"));
+        console.log(websites);
+
+        const zip = users.filter(user => user.address.zipcode.includes("0"));
+        console.log(zip);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+getUsers();
