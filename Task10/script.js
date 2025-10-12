@@ -2,6 +2,7 @@
 const logInForm = document.getElementById("log_in_form");
 const userName = document.getElementById("username");
 const result = document.getElementById("result");
+const logoutBtn = document.getElementById("logout");
 
 logInForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ logInForm.addEventListener("submit", (e) => {
     logInForm.classList.add("none");
     const getUserName = localStorage.getItem("userName");
     result.innerHTML = `Welcome back, ${getUserName}!`;
+    logoutBtn.style.display = "block";
 });
 
 
@@ -57,8 +59,6 @@ function getCookie(name) {
 
 
 // 4. Logout Function
-const logoutBtn = document.getElementById("logout");
-
 logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("userName");
     sessionStorage.clear();
