@@ -365,24 +365,67 @@
 
 
 
-const API_URL = "https://jsonplaceholder.typicode.com/users";
+// const API_URL = "https://jsonplaceholder.typicode.com/users";
 
-async function getUsers() {
-    try {
-        const res = await axios.get(API_URL);
-        users = res.data;
+// async function getUsers() {
+//     try {
+//         const res = await axios.get(API_URL);
+//         users = res.data;
 
-        const longNamedUsers = users.filter(user => user.name.length > 6);
-        console.log(longNamedUsers);
+//         const longNamedUsers = users.filter(user => user.name.length > 6);
+//         console.log(longNamedUsers);
 
-        const websites = users.filter(user => user.website.endsWith(".org"));
-        console.log(websites);
+//         const websites = users.filter(user => user.website.endsWith(".org"));
+//         console.log(websites);
 
-        const zip = users.filter(user => user.address.zipcode.includes("0"));
-        console.log(zip);
+//         const zip = users.filter(user => user.address.zipcode.includes("0"));
+//         console.log(zip);
 
-    } catch (error) {
-        console.log(error);
-    }
-}
-getUsers();
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// getUsers();
+
+
+
+
+// localStorage.setItem("theme", "dark");
+// console.log(localStorage.getItem("theme"));
+
+// const user = { name: "Dachi", age: 19 };
+// localStorage.setItem("user", JSON.stringify(user));
+// const savedUser = JSON.parse(localStorage.getItem("user"));
+// console.log(savedUser.name)
+// localStorage.clear()
+
+
+
+
+// localStorage.setItem("theme", "Light");
+
+// const user1 = { name: "Nino", birthdate: 2001, email: "email1@gmail.com", phone: 555555555 };
+// const user2 = { name: "Ana", birthdate: 2002, email: "email2@gmail.com", phone: 555333333 };
+// localStorage.setItem("user1", JSON.stringify(user1));
+// localStorage.setItem("user2", JSON.stringify(user2));
+
+// const savedUser1 = JSON.parse(localStorage.getItem("user1"));
+// const savedUser2 = JSON.parse(localStorage.getItem("user2"));
+// console.log(savedUser1, savedUser2)
+
+// setTimeout(() => {
+//     localStorage.clear()
+// }, 10000);
+
+
+let tempCart = JSON.parse(sessionStorage.getItem("tempCart")) || [];
+
+tempCart.push({ id: 1, name: "product1", price: 100 });
+tempCart.push({ id: 2, name: "product2", price: 200 });
+tempCart.push({ id: 3, name: "product3", price: 300 });
+
+sessionStorage.setItem("tempCart", JSON.stringify(tempCart))
+
+setTimeout(() => {
+    sessionStorage.clear()
+}, 15000);
