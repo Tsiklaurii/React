@@ -1,5 +1,6 @@
 import React from 'react'
-import { InfoCard, InfoPhotoCard, PhotoCard } from './Cards'
+import { InfoCard, InfoPhotoCard, Photo, PhotoCard } from './Cards'
+import Client from './Client'
 
 const Content = () => {
     return (
@@ -34,6 +35,41 @@ const Content = () => {
                     titleColor="#052C3B"
                     info="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
                     infoColor="#19536C"
+                />
+            </div>
+            <h3 className='clients_title'>CLIENT TESTIMONIALS</h3>
+            <div className='clients'>
+                <Client
+                    img="src/assets/images/person1.png"
+                    description="We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit."
+                    name="Emily R."
+                    position="Marketing Director"
+                />
+                <Client
+                    img="src/assets/images/person2.png"
+                    description="Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience."
+                    name="Thomas S."
+                    position="Chief Operating Officer"
+                />
+                <Client
+                    img="src/assets/images/person3.png"
+                    description="Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
+                    name="Jennie F."
+                    position="Business Owner"
+                />
+            </div>
+            <div className='photos'>
+                <Photo
+                    img="src/assets/images/milk.png"
+                />
+                <Photo
+                    img="src/assets/images/orange.png"
+                />
+                <Photo
+                    img="src/assets/images/waffle.png"
+                />
+                <Photo
+                    img="src/assets/images/sugar.png"
                 />
             </div>
         </>

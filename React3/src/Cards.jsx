@@ -32,3 +32,11 @@ export const InfoPhotoCard = (props) => {
         </div>
     )
 }
+
+export const Photo = (props) => {
+    return (
+        <div className='photo'>
+            <img src={props.img} />
+        </div>
+    )
+}
