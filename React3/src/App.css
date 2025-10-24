@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./assets/fonts/Barlow-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('./assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('truetype');
+}
+
+.header {
+  margin: auto;
+  max-width: 1352px;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 47px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.13px;
+}
+
+.contact_btn {
+  width: 140px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font-family: "Fraunces";
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #24303E;
+}
+
+.footer {
+  width: 100%;
+  min-height: 350px;
+  background-color: #90D4C6;
+  padding: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_nav {
+  display: flex;
+  align-items: center;
+  gap: 57px;
+  margin: 40px 0px 88px 0px;
+
+}
+
+.footer_nav a {
+  text-decoration: none;
+  color: #2C7566;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.13px;
+  font-family: "Barlow";
+}
+
+.soc_networks {
+  display: flex;
+  gap: 28px;
+
+}
+
+.soc_networks img,
+.footer_logo {
+  cursor: pointer;
+}
