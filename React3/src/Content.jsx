@@ -10,6 +10,7 @@ const Content = () => {
                     title="Transform your brand"
                     info="We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you."
                     more="#"
+                    borderColor="#FAD400"
                 />
                 <PhotoCard
                     img="src/assets/images/egg.jpg"
@@ -21,6 +22,7 @@ const Content = () => {
                     title="Stand out to the right audience"
                     info="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places."
                     more="#"
+                    borderColor="#FE7766"
                 />
                 <InfoPhotoCard
                     img="src/assets/images/cherry.png"

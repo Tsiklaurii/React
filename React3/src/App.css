@@ -96,6 +96,12 @@
   font-weight: 700;
   line-height: 25px;
   color: #24303E;
+  transition: all 0.3s ease;
+}
+
+.contact_btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
 }
 
 .footer {
@@ -124,6 +130,11 @@
   line-height: 25px;
   letter-spacing: -0.13px;
   font-family: "Barlow", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.footer_nav a:hover {
+  color: #FFFFFF;
 }
 
 .soc_networks {
@@ -198,11 +209,16 @@
 
 .underline {
   width: 137px;
-  border-bottom: 10px solid #FAD400;
   opacity: 25%;
   border-radius: 28px;
   position: relative;
   top: -10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card a:hover+.underline {
+  opacity: 1;
 }
 
 .info_photo_card {
@@ -311,7 +327,6 @@
 }
 
 .photo {
-  max-height: 447px;
   width: 100%;
 }
 

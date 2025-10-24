@@ -7,7 +7,7 @@ export const InfoCard = (props) => {
                 <h1>{props.title}</h1>
                 <p>{props.info}</p>
                 <a href={props.more}>Learn More</a>
-                <div className='underline'></div>
+                <div className='underline' style={{ borderBottom: `10px solid ${props.borderColor}` }}></div>
             </div>
         </div>
     )
