@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+
     return (
-        <div className='header_container'>
+        <div>
             <img src="src/assets/images/cover.png" alt="cover" className='cover' />
 
             <div className='header_content'>
                 <div className='header'>
                     <img src="src/assets/images/logo.svg" alt="logo" className='logo' />
-                    <div className='nav'>
+                    <div className={`nav ${menuOpen ? 'open' : ''}`}>
                         <a href="#">About</a>
                         <a href="#">Services</a>
                         <a href="#">Projects</a>
                         <button className='contact_btn'>Contact</button>
+                    </div>
+                    <div className={`burger_menu ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
 
