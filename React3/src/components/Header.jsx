@@ -7,11 +7,11 @@ const Header = () => {
 
     return (
         <div>
-            <img src="src/assets/images/cover.png" alt="cover" className='cover' />
+            <img src="/images/cover.png" alt="cover" className='cover' />
 
             <div className='header_content'>
                 <div className='header'>
-                    <img src="src/assets/images/logo.svg" alt="logo" className='logo' />
+                    <img src="/images/logo.svg" alt="logo" className='logo' />
                     <div className={`nav ${menuOpen ? 'open' : ''}`}>
                         <a href="#">About</a>
                         <a href="#">Services</a>
@@ -26,7 +26,7 @@ const Header = () => {
                 </div>
 
                 <h1 className="title">We are creatives</h1>
-                <img src="src/assets/images/arrow.svg" alt="arrow" className='arrow' />
+                <img src="/images/arrow.svg" alt="arrow" className='arrow' />
             </div>
         </div>
     )
