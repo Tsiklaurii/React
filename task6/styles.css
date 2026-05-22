@@ -1,0 +1,49 @@
+.colorForm,
+.numberForm {
+    border: 1px solid gray;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 30px auto;
+}
+
+.colorForm input,
+.colorForm button,
+.numberForm input,
+.numberForm button {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.colorForm button,
+.numberForm button {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.openBtn {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+}
